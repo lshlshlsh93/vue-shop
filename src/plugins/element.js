@@ -24,7 +24,13 @@ import {
   Tooltip,
   Pagination,
   Dialog,
-  MessageBox
+  MessageBox,
+  Tag,
+  Tree,
+  Select,
+  Option,
+  Carousel,
+  CarouselItem
 } from 'element-ui'
 
 // 按钮组件
@@ -54,6 +60,14 @@ Vue.use(Switch)
 Vue.use(Tooltip)
 Vue.use(Pagination)
 Vue.use(Dialog)
+Vue.use(Tag)
+Vue.use(Tree)
+Vue.use(Select)
+Vue.use(Option)
+// 轮播图开始
+Vue.use(Carousel)
+Vue.use(CarouselItem)
+// // 轮播图结束
 // 引入弹框提示组件
 Vue.prototype.$message = Message
 Vue.prototype.$confirm = MessageBox.confirm
