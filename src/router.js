@@ -15,6 +15,12 @@ import Rights from './components/power/rights.vue'
 
 // 角色列表
 import Roles from './components/power/roles.vue'
+
+// 商品分类组件
+import Goods from './components/goods/goods.vue'
+
+// 商品分类组件
+import Rate from './components/goods/cate.vue'
 // @ --> src
 Vue.use(Router)
 
@@ -47,6 +53,14 @@ const router = new Router({
         {
           path: '/roles',
           component: Roles
+        },
+        {
+          path: '/goods',
+          component: Goods
+        },
+        {
+          path: '/categories',
+          component: Rate
         }
       ]
     }

@@ -3,14 +3,14 @@
     <el-header
       ><div>
         <img src="../assets/plant.jpg" alt="" width="50px" />
-        <span>后台管理系统</span>
+        <span>商城后台管理系统</span>
       </div>
       <el-button type="info" @click="logout">退出</el-button></el-header
     >
     <!-- 页面主体区域 -->
     <el-container>
       <!-- 侧边栏 -->
-      <el-aside :width="Collapse ? '64px' : '220px'">
+      <el-aside :width="Collapse ? '64px' : '200px'" height="500px">
         <div class="toggle_button" @click="toggleCollapse">
           -_-
         </div>

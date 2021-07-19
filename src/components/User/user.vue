@@ -76,7 +76,7 @@
                 type="danger"
                 icon="el-icon-delete"
                 size="mini"
-                @click="removeUserById(scope.row.id)"
+                @click="removeUserById(scope.row)"
               ></el-button>
             </el-tooltip>
             <!-- 分配角色按钮 -->
@@ -306,6 +306,7 @@ export default {
       if (result.meta.status !== 200) {
         return this.$message.error(result.meta.msg)
       }
+      // this.$message.success('获取用户列表成功')
       this.userList = result.data.users
       this.total = result.data.total
       // console.log(result)
@@ -333,7 +334,7 @@ export default {
         userInfo.mg_state = !userInfo.mg_state
         return this.$message.error(result.meta.msg)
       }
-      this.$message.success(result.meta.msg)
+      this.$message.success('变更状态成功')
     },
     // 监听添加用户对话框的关闭事件
     addDialogClose() {
@@ -387,9 +388,10 @@ export default {
         this.$message.success(result.meta.msg)
       })
     },
-    async removeUserById(id) {
+    async removeUserById(user) {
+      //  console.log(user)
       const confirmResult = await this.$confirm(
-        '此操作将永久删除该用户, 是否继续?',
+        '此操作将永久删除用户' + user.username + ', 是否继续?',
         '提示',
         {
           confirmButtonText: '确定',
@@ -401,7 +403,7 @@ export default {
       if (confirmResult !== 'confirm') {
         return this.$message.info('已取消删除')
       }
-      const { data: result } = await this.$http.delete('users/' + id)
+      const { data: result } = await this.$http.delete('users/' + user.id)
       if (result.meta.status !== 200) {
         return this.$message.error(result.meta.msg)
       }
