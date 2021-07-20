@@ -21,6 +21,9 @@ import Goods from './components/goods/goods.vue'
 
 // 商品分类组件
 import Rate from './components/goods/cate.vue'
+
+// 商品参数组件
+import Params from './components/goods/params.vue'
 // @ --> src
 Vue.use(Router)
 
@@ -61,6 +64,10 @@ const router = new Router({
         {
           path: '/categories',
           component: Rate
+        },
+        {
+          path: '/params',
+          component: Params
         }
       ]
     }
