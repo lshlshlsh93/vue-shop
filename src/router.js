@@ -24,6 +24,9 @@ import Rate from './components/goods/cate.vue'
 
 // 商品参数组件
 import Params from './components/goods/params.vue'
+
+// 添加商品
+import Add from './components/goods/add.vue'
 // @ --> src
 Vue.use(Router)
 
@@ -68,6 +71,10 @@ const router = new Router({
         {
           path: '/params',
           component: Params
+        },
+        {
+          path: '/goods/add',
+          component: Add
         }
       ]
     }

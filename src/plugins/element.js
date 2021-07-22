@@ -32,6 +32,11 @@ import {
   Cascader,
   Alert,
   Tabs,
+  Step,
+  Steps,
+  Checkbox,
+  CheckboxGroup,
+  Upload,
   TabPane,
   Carousel,
   CarouselItem
@@ -72,6 +77,11 @@ Vue.use(Cascader)
 Vue.use(Alert)
 Vue.use(Tabs)
 Vue.use(TabPane)
+Vue.use(Step)
+Vue.use(Steps)
+Vue.use(Checkbox)
+Vue.use(CheckboxGroup)
+Vue.use(Upload)
 // 轮播图开始
 Vue.use(Carousel)
 Vue.use(CarouselItem)

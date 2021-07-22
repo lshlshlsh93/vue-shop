@@ -311,7 +311,7 @@ export default {
         this.onlyTableData = []
         return
       }
-      console.log(this.selectedKeys)
+      // console.log(this.selectedKeys)
       // 根据所选的分类id，和所处于的分类面板获取对应的参数
       const { data: res } = await this.$http.get(
         `categories/${this.catId}/attributes`,
@@ -333,7 +333,7 @@ export default {
         // 文本框中输入的值
         item.inputValue = ''
       })
-      console.log(res.data)
+      // console.log(res.data)
       // this.$message.success(res.meta.msg)
       // 判断选择的是动态参数还是静态属性
       if (this.activeName === 'many') {
@@ -388,7 +388,7 @@ export default {
       this.$refs.editParamsFormRef.resetFields()
     },
     // 点击按钮修改参数
-    async editParams(edit) {
+    async editParams() {
       this.$refs.editParamsFormRef.validate(async valid => {
         if (!valid) return
         const { data: res } = await this.$http.put(
