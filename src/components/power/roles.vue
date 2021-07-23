@@ -113,7 +113,7 @@
       <el-dialog
         title="添加用户"
         :visible.sync="addRoleDialogVisible"
-        width="40%"
+        width="50%"
         @close="addRoleDialogClose"
       >
         <el-form
@@ -140,7 +140,7 @@
       <el-dialog
         title="编辑角色"
         :visible.sync="editRoleDialogVisible"
-        width="30%"
+        width="50%"
         :close="editDialogClose"
       >
         <el-form ref="editRoleRef" :model="editRole" label-width="80px">
@@ -163,7 +163,7 @@
     <el-dialog
       title="提示"
       :visible.sync="setRightsDialogVisible"
-      width="30%"
+      width="50%"
       @close="setRightsDialogClosed"
     >
       <el-tree

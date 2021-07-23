@@ -113,7 +113,7 @@
     <el-dialog
       title="添加用户"
       :visible.sync="addDialogVisible"
-      width="40%"
+      width="50%"
       @close="addDialogClose"
     >
       <!-- 内容主体内容 -->
@@ -138,7 +138,9 @@
       </el-form>
       <!-- 底部区域 -->
       <span slot="footer" class="dialog-footer">
-        <el-button @click="addDialogVisible = false">取 消</el-button>
+        <el-button @click="addDialogVisible = false" :disabled="false"
+          >取 消</el-button
+        >
         <el-button type="primary" @click="addUser">确 定</el-button>
       </span>
     </el-dialog>
@@ -147,7 +149,7 @@
     <el-dialog
       title="修改用户"
       :visible.sync="editDialogVisible"
-      width="40%"
+      width="50%"
       @close="editDialogClose"
     >
       <el-form
@@ -176,7 +178,7 @@
     <el-dialog
       title="提示"
       :visible.sync="setRoleDialogVisible"
-      width="30%"
+      width="50%"
       @close="setRoleDialogClosed"
     >
       <div>
@@ -220,6 +222,7 @@ export default {
       callback(new Error('请输入正确的手机号'))
     }
     return {
+      saveBtnDisabled: false, // 是否禁用保存按钮，防止表单重复提交
       queryInfo: {
         // 获取用户的参数对象
         query: '',

@@ -38,6 +38,8 @@ import {
   CheckboxGroup,
   Upload,
   TabPane,
+  Timeline,
+  TimelineItem,
   Carousel,
   CarouselItem
 } from 'element-ui'
@@ -82,6 +84,8 @@ Vue.use(Steps)
 Vue.use(Checkbox)
 Vue.use(CheckboxGroup)
 Vue.use(Upload)
+Vue.use(Timeline)
+Vue.use(TimelineItem)
 // 轮播图开始
 Vue.use(Carousel)
 Vue.use(CarouselItem)

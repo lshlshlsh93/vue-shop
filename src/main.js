@@ -23,6 +23,9 @@ import axios from 'axios'
 
 // 配置请求的根路径
 axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
+
+axios.defaults.timeout = 5000
+
 // 配置请求拦截器
 axios.interceptors.request.use(
   config => {
@@ -34,6 +37,7 @@ axios.interceptors.request.use(
   },
   error => {
     // Do something with request error
+    console.log(error)
     return Promise.reject(error)
   }
 )
@@ -45,6 +49,7 @@ axios.interceptors.response.use(
   },
   error => {
     // Do something with response error
+    console.log(error)
     return Promise.reject(error)
   }
 )

@@ -126,7 +126,7 @@
     <el-dialog
       title="编辑分类"
       :visible.sync="editCateDialogVisible"
-      width="40%"
+      width="50%"
       @close="editDialogClose"
     >
       <el-form

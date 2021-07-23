@@ -21,7 +21,7 @@
           <el-input
             v-model="loginForm.username"
             props=""
-            placeholder="请输入用户名"
+            placeholder="Username"
             prefix-icon="iconfont icon-3702mima"
           ></el-input>
         </el-form-item>
@@ -30,7 +30,7 @@
           <el-input
             type="password"
             v-model="loginForm.password"
-            placeholder="请输入密码"
+            placeholder="Password"
             prefix-icon="iconfont icon-user"
             show-password
           ></el-input>

@@ -173,7 +173,7 @@
     <el-dialog
       :title="'添加' + dialogTitleName"
       :visible.sync="addParamsDialogVisible"
-      width="40%"
+      width="50%"
       @close="addParamsFormClosed"
     >
       <el-form
@@ -200,7 +200,7 @@
     <el-dialog
       :title="'编辑' + dialogTitleName"
       :visible.sync="editDialogVisible"
-      width="40%"
+      width="50%"
       @close="editParamsFormClosed"
     >
       <el-form
@@ -223,7 +223,6 @@
         <el-button type="primary" @click="editParams">确 定</el-button>
       </span>
     </el-dialog>
-    <!-- 删除对话框 -->
   </div>
 </template>
 <script>

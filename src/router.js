@@ -27,6 +27,9 @@ import Params from './components/goods/params.vue'
 
 // 添加商品
 import Add from './components/goods/add.vue'
+
+// 订单列表组件
+import Orders from './components/orders/order.vue'
 // @ --> src
 Vue.use(Router)
 
@@ -75,6 +78,10 @@ const router = new Router({
         {
           path: '/goods/add',
           component: Add
+        },
+        {
+          path: '/orders',
+          component: Orders
         }
       ]
     }

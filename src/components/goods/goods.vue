@@ -75,7 +75,7 @@
     <el-dialog
       title="编辑商品"
       :visible.sync="editDialogVisible"
-      width="60%"
+      width="50%"
       @close="handleDialogClosed"
     >
       <!-- 编辑表格项区域 -->
@@ -210,15 +210,6 @@ export default {
         const { data: res } = await this.$http.put(
           `goods/${this.editForm.goods_id}`,
           this.editForm
-          // {
-          //   params: {
-          //     goods_name: this.editForm.goods_name,
-          //     goods_price: this.editForm.goods_price,
-          //     goods_number: this.editForm.goods_number,
-          //     goods_weight: this.editForm.goods_weight,
-          //     goods_introduce: this.editForm.goods_introduce
-          //   }
-          // }
         )
         // console.log(res)
         if (res.meta.status !== 200) {
