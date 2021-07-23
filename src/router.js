@@ -30,6 +30,10 @@ import Add from './components/goods/add.vue'
 
 // 订单列表组件
 import Orders from './components/orders/order.vue'
+
+// 数据报表
+import Report from './components/report/report.vue'
+
 // @ --> src
 Vue.use(Router)
 
@@ -82,6 +86,10 @@ const router = new Router({
         {
           path: '/orders',
           component: Orders
+        },
+        {
+          path: '/reports',
+          component: Report
         }
       ]
     }
